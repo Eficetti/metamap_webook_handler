@@ -12,16 +12,21 @@ import 'package:shelf_web_socket/shelf_web_socket.dart';
 class MetamapWebhookHandler {
   /// {@macro metamap_webhook_handler}
 
-  MetamapWebhookHandler();
+  MetamapWebhookHandler(this.callback);
 
   ///
-  final _webSocketHandler = webSocketHandler(
+  final Function callback;
+
+  ///
+  late final _webSocketHandler = webSocketHandler(
     (webSocketChannel) {
       webSocketChannel.stream.listen(
         (String message) {
           final body = MatiWebhookResourceData.fromMap(
             jsonDecode(message) as Map<String, dynamic>,
           );
+
+          callback(body);
 
           return webSocketChannel.sink.add(
             jsonEncode(
