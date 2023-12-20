@@ -3,8 +3,8 @@
 import 'dart:convert';
 
 import 'package:metamap_webhook_handler/src/models/metamap_user_information/metamap_user_information.dart';
-import 'package:shelf/shelf.dart' as shelf;
-import 'package:shelf_web_socket/shelf_web_socket.dart';
+import 'package:shelf/shelf.dart';
+import 'package:shelf/shelf_io.dart' as io;
 
 /// {@template metamap_webhook_handler}
 /// METAMAP webhook handler
@@ -12,32 +12,35 @@ import 'package:shelf_web_socket/shelf_web_socket.dart';
 class MetamapWebhookHandler {
   /// {@macro metamap_webhook_handler}
 
-  MetamapWebhookHandler(this.callback);
+  MetamapWebhookHandler();
 
   ///
-  final Function callback;
+  Future<void> startListening({required String url, required int port}) async {
+    final handler =
+        const Pipeline().addMiddleware(logRequests()).addHandler(_handlePost);
 
-  ///
-  late final _webSocketHandler = webSocketHandler(
-    (webSocketChannel) {
-      webSocketChannel.stream.listen(
-        (String message) {
-          final body = MetamapUserInformation.fromJson(
-            jsonDecode(message) as Map<String, dynamic>,
-          );
+    final server = await io.serve(handler, url, port);
 
-          callback(body);
+    print('Serving at http://${server.address.host}:${server.port}');
+  }
 
-          return webSocketChannel.sink.add(
-            jsonEncode(
-              body,
-            ),
-          );
-        },
+  Future<Response> _handlePost(Request request) async {
+    if (request.method == 'POST') {
+      final requestBody = (jsonDecode(await request.readAsString()) as Map)
+          .cast<String, dynamic>();
+
+      if (requestBody['eventName'] == 'verification_updated') {
+        final body = MetamapUserInformation.fromJson(requestBody);
+
+        print('Received POST request with body: $body');
+        return Response.ok(body.toJson());
+      }
+
+      return Response.ok('-');
+    } else {
+      return Response.forbidden(
+        'Unsupported request method: ${request.method}',
       );
-    },
-  );
-
-  ///
-  shelf.Handler get handler => _webSocketHandler;
+    }
+  }
 }
