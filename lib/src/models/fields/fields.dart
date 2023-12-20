@@ -7,15 +7,7 @@ part 'fields.g.dart';
 @freezed
 class Fields with _$Fields {
   const factory Fields({
-    required DocumentField fullName,
-    required DocumentField address,
-    required DocumentField documentNumber,
-    required DocumentField dateOfBirth,
-    required DocumentField expirationDate,
-    required DocumentField cde,
-    required DocumentField curp,
-    required DocumentField ne,
-    required DocumentField ocrNumber,
+    required List<DocumentField> documentFields,
   }) = _Fields;
 
   factory Fields.fromJson(Map<String, dynamic> json) => _$FieldsFromJson(json);

@@ -20,15 +20,7 @@ Fields _$FieldsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Fields {
-  DocumentField get fullName => throw _privateConstructorUsedError;
-  DocumentField get address => throw _privateConstructorUsedError;
-  DocumentField get documentNumber => throw _privateConstructorUsedError;
-  DocumentField get dateOfBirth => throw _privateConstructorUsedError;
-  DocumentField get expirationDate => throw _privateConstructorUsedError;
-  DocumentField get cde => throw _privateConstructorUsedError;
-  DocumentField get curp => throw _privateConstructorUsedError;
-  DocumentField get ne => throw _privateConstructorUsedError;
-  DocumentField get ocrNumber => throw _privateConstructorUsedError;
+  List<DocumentField> get documentFields => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,26 +32,7 @@ abstract class $FieldsCopyWith<$Res> {
   factory $FieldsCopyWith(Fields value, $Res Function(Fields) then) =
       _$FieldsCopyWithImpl<$Res, Fields>;
   @useResult
-  $Res call(
-      {DocumentField fullName,
-      DocumentField address,
-      DocumentField documentNumber,
-      DocumentField dateOfBirth,
-      DocumentField expirationDate,
-      DocumentField cde,
-      DocumentField curp,
-      DocumentField ne,
-      DocumentField ocrNumber});
-
-  $DocumentFieldCopyWith<$Res> get fullName;
-  $DocumentFieldCopyWith<$Res> get address;
-  $DocumentFieldCopyWith<$Res> get documentNumber;
-  $DocumentFieldCopyWith<$Res> get dateOfBirth;
-  $DocumentFieldCopyWith<$Res> get expirationDate;
-  $DocumentFieldCopyWith<$Res> get cde;
-  $DocumentFieldCopyWith<$Res> get curp;
-  $DocumentFieldCopyWith<$Res> get ne;
-  $DocumentFieldCopyWith<$Res> get ocrNumber;
+  $Res call({List<DocumentField> documentFields});
 }
 
 /// @nodoc
@@ -75,126 +48,14 @@ class _$FieldsCopyWithImpl<$Res, $Val extends Fields>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fullName = null,
-    Object? address = null,
-    Object? documentNumber = null,
-    Object? dateOfBirth = null,
-    Object? expirationDate = null,
-    Object? cde = null,
-    Object? curp = null,
-    Object? ne = null,
-    Object? ocrNumber = null,
+    Object? documentFields = null,
   }) {
     return _then(_value.copyWith(
-      fullName: null == fullName
-          ? _value.fullName
-          : fullName // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
-      address: null == address
-          ? _value.address
-          : address // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
-      documentNumber: null == documentNumber
-          ? _value.documentNumber
-          : documentNumber // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
-      dateOfBirth: null == dateOfBirth
-          ? _value.dateOfBirth
-          : dateOfBirth // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
-      expirationDate: null == expirationDate
-          ? _value.expirationDate
-          : expirationDate // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
-      cde: null == cde
-          ? _value.cde
-          : cde // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
-      curp: null == curp
-          ? _value.curp
-          : curp // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
-      ne: null == ne
-          ? _value.ne
-          : ne // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
-      ocrNumber: null == ocrNumber
-          ? _value.ocrNumber
-          : ocrNumber // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
+      documentFields: null == documentFields
+          ? _value.documentFields
+          : documentFields // ignore: cast_nullable_to_non_nullable
+              as List<DocumentField>,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $DocumentFieldCopyWith<$Res> get fullName {
-    return $DocumentFieldCopyWith<$Res>(_value.fullName, (value) {
-      return _then(_value.copyWith(fullName: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $DocumentFieldCopyWith<$Res> get address {
-    return $DocumentFieldCopyWith<$Res>(_value.address, (value) {
-      return _then(_value.copyWith(address: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $DocumentFieldCopyWith<$Res> get documentNumber {
-    return $DocumentFieldCopyWith<$Res>(_value.documentNumber, (value) {
-      return _then(_value.copyWith(documentNumber: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $DocumentFieldCopyWith<$Res> get dateOfBirth {
-    return $DocumentFieldCopyWith<$Res>(_value.dateOfBirth, (value) {
-      return _then(_value.copyWith(dateOfBirth: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $DocumentFieldCopyWith<$Res> get expirationDate {
-    return $DocumentFieldCopyWith<$Res>(_value.expirationDate, (value) {
-      return _then(_value.copyWith(expirationDate: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $DocumentFieldCopyWith<$Res> get cde {
-    return $DocumentFieldCopyWith<$Res>(_value.cde, (value) {
-      return _then(_value.copyWith(cde: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $DocumentFieldCopyWith<$Res> get curp {
-    return $DocumentFieldCopyWith<$Res>(_value.curp, (value) {
-      return _then(_value.copyWith(curp: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $DocumentFieldCopyWith<$Res> get ne {
-    return $DocumentFieldCopyWith<$Res>(_value.ne, (value) {
-      return _then(_value.copyWith(ne: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $DocumentFieldCopyWith<$Res> get ocrNumber {
-    return $DocumentFieldCopyWith<$Res>(_value.ocrNumber, (value) {
-      return _then(_value.copyWith(ocrNumber: value) as $Val);
-    });
   }
 }
 
@@ -205,35 +66,7 @@ abstract class _$$FieldsImplCopyWith<$Res> implements $FieldsCopyWith<$Res> {
       __$$FieldsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {DocumentField fullName,
-      DocumentField address,
-      DocumentField documentNumber,
-      DocumentField dateOfBirth,
-      DocumentField expirationDate,
-      DocumentField cde,
-      DocumentField curp,
-      DocumentField ne,
-      DocumentField ocrNumber});
-
-  @override
-  $DocumentFieldCopyWith<$Res> get fullName;
-  @override
-  $DocumentFieldCopyWith<$Res> get address;
-  @override
-  $DocumentFieldCopyWith<$Res> get documentNumber;
-  @override
-  $DocumentFieldCopyWith<$Res> get dateOfBirth;
-  @override
-  $DocumentFieldCopyWith<$Res> get expirationDate;
-  @override
-  $DocumentFieldCopyWith<$Res> get cde;
-  @override
-  $DocumentFieldCopyWith<$Res> get curp;
-  @override
-  $DocumentFieldCopyWith<$Res> get ne;
-  @override
-  $DocumentFieldCopyWith<$Res> get ocrNumber;
+  $Res call({List<DocumentField> documentFields});
 }
 
 /// @nodoc
@@ -247,53 +80,13 @@ class __$$FieldsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fullName = null,
-    Object? address = null,
-    Object? documentNumber = null,
-    Object? dateOfBirth = null,
-    Object? expirationDate = null,
-    Object? cde = null,
-    Object? curp = null,
-    Object? ne = null,
-    Object? ocrNumber = null,
+    Object? documentFields = null,
   }) {
     return _then(_$FieldsImpl(
-      fullName: null == fullName
-          ? _value.fullName
-          : fullName // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
-      address: null == address
-          ? _value.address
-          : address // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
-      documentNumber: null == documentNumber
-          ? _value.documentNumber
-          : documentNumber // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
-      dateOfBirth: null == dateOfBirth
-          ? _value.dateOfBirth
-          : dateOfBirth // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
-      expirationDate: null == expirationDate
-          ? _value.expirationDate
-          : expirationDate // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
-      cde: null == cde
-          ? _value.cde
-          : cde // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
-      curp: null == curp
-          ? _value.curp
-          : curp // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
-      ne: null == ne
-          ? _value.ne
-          : ne // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
-      ocrNumber: null == ocrNumber
-          ? _value.ocrNumber
-          : ocrNumber // ignore: cast_nullable_to_non_nullable
-              as DocumentField,
+      documentFields: null == documentFields
+          ? _value._documentFields
+          : documentFields // ignore: cast_nullable_to_non_nullable
+              as List<DocumentField>,
     ));
   }
 }
@@ -301,42 +94,23 @@ class __$$FieldsImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$FieldsImpl implements _Fields {
-  const _$FieldsImpl(
-      {required this.fullName,
-      required this.address,
-      required this.documentNumber,
-      required this.dateOfBirth,
-      required this.expirationDate,
-      required this.cde,
-      required this.curp,
-      required this.ne,
-      required this.ocrNumber});
+  const _$FieldsImpl({required final List<DocumentField> documentFields})
+      : _documentFields = documentFields;
 
   factory _$FieldsImpl.fromJson(Map<String, dynamic> json) =>
       _$$FieldsImplFromJson(json);
 
+  final List<DocumentField> _documentFields;
   @override
-  final DocumentField fullName;
-  @override
-  final DocumentField address;
-  @override
-  final DocumentField documentNumber;
-  @override
-  final DocumentField dateOfBirth;
-  @override
-  final DocumentField expirationDate;
-  @override
-  final DocumentField cde;
-  @override
-  final DocumentField curp;
-  @override
-  final DocumentField ne;
-  @override
-  final DocumentField ocrNumber;
+  List<DocumentField> get documentFields {
+    if (_documentFields is EqualUnmodifiableListView) return _documentFields;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_documentFields);
+  }
 
   @override
   String toString() {
-    return 'Fields(fullName: $fullName, address: $address, documentNumber: $documentNumber, dateOfBirth: $dateOfBirth, expirationDate: $expirationDate, cde: $cde, curp: $curp, ne: $ne, ocrNumber: $ocrNumber)';
+    return 'Fields(documentFields: $documentFields)';
   }
 
   @override
@@ -344,26 +118,14 @@ class _$FieldsImpl implements _Fields {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FieldsImpl &&
-            (identical(other.fullName, fullName) ||
-                other.fullName == fullName) &&
-            (identical(other.address, address) || other.address == address) &&
-            (identical(other.documentNumber, documentNumber) ||
-                other.documentNumber == documentNumber) &&
-            (identical(other.dateOfBirth, dateOfBirth) ||
-                other.dateOfBirth == dateOfBirth) &&
-            (identical(other.expirationDate, expirationDate) ||
-                other.expirationDate == expirationDate) &&
-            (identical(other.cde, cde) || other.cde == cde) &&
-            (identical(other.curp, curp) || other.curp == curp) &&
-            (identical(other.ne, ne) || other.ne == ne) &&
-            (identical(other.ocrNumber, ocrNumber) ||
-                other.ocrNumber == ocrNumber));
+            const DeepCollectionEquality()
+                .equals(other._documentFields, _documentFields));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, fullName, address,
-      documentNumber, dateOfBirth, expirationDate, cde, curp, ne, ocrNumber);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_documentFields));
 
   @JsonKey(ignore: true)
   @override
@@ -380,37 +142,13 @@ class _$FieldsImpl implements _Fields {
 }
 
 abstract class _Fields implements Fields {
-  const factory _Fields(
-      {required final DocumentField fullName,
-      required final DocumentField address,
-      required final DocumentField documentNumber,
-      required final DocumentField dateOfBirth,
-      required final DocumentField expirationDate,
-      required final DocumentField cde,
-      required final DocumentField curp,
-      required final DocumentField ne,
-      required final DocumentField ocrNumber}) = _$FieldsImpl;
+  const factory _Fields({required final List<DocumentField> documentFields}) =
+      _$FieldsImpl;
 
   factory _Fields.fromJson(Map<String, dynamic> json) = _$FieldsImpl.fromJson;
 
   @override
-  DocumentField get fullName;
-  @override
-  DocumentField get address;
-  @override
-  DocumentField get documentNumber;
-  @override
-  DocumentField get dateOfBirth;
-  @override
-  DocumentField get expirationDate;
-  @override
-  DocumentField get cde;
-  @override
-  DocumentField get curp;
-  @override
-  DocumentField get ne;
-  @override
-  DocumentField get ocrNumber;
+  List<DocumentField> get documentFields;
   @override
   @JsonKey(ignore: true)
   _$$FieldsImplCopyWith<_$FieldsImpl> get copyWith =>
