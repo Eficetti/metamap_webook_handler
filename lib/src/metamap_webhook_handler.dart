@@ -43,4 +43,8 @@ class MetamapWebhookHandler {
       );
     }
   }
+
+  MetamapUserInformation getBody(MetamapUserInformation body) {
+    return body;
+  }
 }

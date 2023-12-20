@@ -7,18 +7,20 @@ part of 'fields.dart';
 // **************************************************************************
 
 _$FieldsImpl _$$FieldsImplFromJson(Map<String, dynamic> json) => _$FieldsImpl(
-      fullName: Address.fromJson(json['fullName'] as Map<String, dynamic>),
-      address: Address.fromJson(json['address'] as Map<String, dynamic>),
-      documentNumber:
-          Address.fromJson(json['documentNumber'] as Map<String, dynamic>),
+      fullName:
+          DocumentField.fromJson(json['fullName'] as Map<String, dynamic>),
+      address: DocumentField.fromJson(json['address'] as Map<String, dynamic>),
+      documentNumber: DocumentField.fromJson(
+          json['documentNumber'] as Map<String, dynamic>),
       dateOfBirth:
-          DateOfBirth.fromJson(json['dateOfBirth'] as Map<String, dynamic>),
-      expirationDate:
-          DateOfBirth.fromJson(json['expirationDate'] as Map<String, dynamic>),
-      cde: Address.fromJson(json['cde'] as Map<String, dynamic>),
-      curp: Address.fromJson(json['curp'] as Map<String, dynamic>),
-      ne: Address.fromJson(json['ne'] as Map<String, dynamic>),
-      ocrNumber: Address.fromJson(json['ocrNumber'] as Map<String, dynamic>),
+          DocumentField.fromJson(json['dateOfBirth'] as Map<String, dynamic>),
+      expirationDate: DocumentField.fromJson(
+          json['expirationDate'] as Map<String, dynamic>),
+      cde: DocumentField.fromJson(json['cde'] as Map<String, dynamic>),
+      curp: DocumentField.fromJson(json['curp'] as Map<String, dynamic>),
+      ne: DocumentField.fromJson(json['ne'] as Map<String, dynamic>),
+      ocrNumber:
+          DocumentField.fromJson(json['ocrNumber'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$FieldsImplToJson(_$FieldsImpl instance) =>

@@ -20,15 +20,15 @@ Fields _$FieldsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Fields {
-  Address get fullName => throw _privateConstructorUsedError;
-  Address get address => throw _privateConstructorUsedError;
-  Address get documentNumber => throw _privateConstructorUsedError;
-  DateOfBirth get dateOfBirth => throw _privateConstructorUsedError;
-  DateOfBirth get expirationDate => throw _privateConstructorUsedError;
-  Address get cde => throw _privateConstructorUsedError;
-  Address get curp => throw _privateConstructorUsedError;
-  Address get ne => throw _privateConstructorUsedError;
-  Address get ocrNumber => throw _privateConstructorUsedError;
+  DocumentField get fullName => throw _privateConstructorUsedError;
+  DocumentField get address => throw _privateConstructorUsedError;
+  DocumentField get documentNumber => throw _privateConstructorUsedError;
+  DocumentField get dateOfBirth => throw _privateConstructorUsedError;
+  DocumentField get expirationDate => throw _privateConstructorUsedError;
+  DocumentField get cde => throw _privateConstructorUsedError;
+  DocumentField get curp => throw _privateConstructorUsedError;
+  DocumentField get ne => throw _privateConstructorUsedError;
+  DocumentField get ocrNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,25 +41,25 @@ abstract class $FieldsCopyWith<$Res> {
       _$FieldsCopyWithImpl<$Res, Fields>;
   @useResult
   $Res call(
-      {Address fullName,
-      Address address,
-      Address documentNumber,
-      DateOfBirth dateOfBirth,
-      DateOfBirth expirationDate,
-      Address cde,
-      Address curp,
-      Address ne,
-      Address ocrNumber});
+      {DocumentField fullName,
+      DocumentField address,
+      DocumentField documentNumber,
+      DocumentField dateOfBirth,
+      DocumentField expirationDate,
+      DocumentField cde,
+      DocumentField curp,
+      DocumentField ne,
+      DocumentField ocrNumber});
 
-  $AddressCopyWith<$Res> get fullName;
-  $AddressCopyWith<$Res> get address;
-  $AddressCopyWith<$Res> get documentNumber;
-  $DateOfBirthCopyWith<$Res> get dateOfBirth;
-  $DateOfBirthCopyWith<$Res> get expirationDate;
-  $AddressCopyWith<$Res> get cde;
-  $AddressCopyWith<$Res> get curp;
-  $AddressCopyWith<$Res> get ne;
-  $AddressCopyWith<$Res> get ocrNumber;
+  $DocumentFieldCopyWith<$Res> get fullName;
+  $DocumentFieldCopyWith<$Res> get address;
+  $DocumentFieldCopyWith<$Res> get documentNumber;
+  $DocumentFieldCopyWith<$Res> get dateOfBirth;
+  $DocumentFieldCopyWith<$Res> get expirationDate;
+  $DocumentFieldCopyWith<$Res> get cde;
+  $DocumentFieldCopyWith<$Res> get curp;
+  $DocumentFieldCopyWith<$Res> get ne;
+  $DocumentFieldCopyWith<$Res> get ocrNumber;
 }
 
 /// @nodoc
@@ -89,110 +89,110 @@ class _$FieldsCopyWithImpl<$Res, $Val extends Fields>
       fullName: null == fullName
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
-              as Address,
+              as DocumentField,
       address: null == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
-              as Address,
+              as DocumentField,
       documentNumber: null == documentNumber
           ? _value.documentNumber
           : documentNumber // ignore: cast_nullable_to_non_nullable
-              as Address,
+              as DocumentField,
       dateOfBirth: null == dateOfBirth
           ? _value.dateOfBirth
           : dateOfBirth // ignore: cast_nullable_to_non_nullable
-              as DateOfBirth,
+              as DocumentField,
       expirationDate: null == expirationDate
           ? _value.expirationDate
           : expirationDate // ignore: cast_nullable_to_non_nullable
-              as DateOfBirth,
+              as DocumentField,
       cde: null == cde
           ? _value.cde
           : cde // ignore: cast_nullable_to_non_nullable
-              as Address,
+              as DocumentField,
       curp: null == curp
           ? _value.curp
           : curp // ignore: cast_nullable_to_non_nullable
-              as Address,
+              as DocumentField,
       ne: null == ne
           ? _value.ne
           : ne // ignore: cast_nullable_to_non_nullable
-              as Address,
+              as DocumentField,
       ocrNumber: null == ocrNumber
           ? _value.ocrNumber
           : ocrNumber // ignore: cast_nullable_to_non_nullable
-              as Address,
+              as DocumentField,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $AddressCopyWith<$Res> get fullName {
-    return $AddressCopyWith<$Res>(_value.fullName, (value) {
+  $DocumentFieldCopyWith<$Res> get fullName {
+    return $DocumentFieldCopyWith<$Res>(_value.fullName, (value) {
       return _then(_value.copyWith(fullName: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $AddressCopyWith<$Res> get address {
-    return $AddressCopyWith<$Res>(_value.address, (value) {
+  $DocumentFieldCopyWith<$Res> get address {
+    return $DocumentFieldCopyWith<$Res>(_value.address, (value) {
       return _then(_value.copyWith(address: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $AddressCopyWith<$Res> get documentNumber {
-    return $AddressCopyWith<$Res>(_value.documentNumber, (value) {
+  $DocumentFieldCopyWith<$Res> get documentNumber {
+    return $DocumentFieldCopyWith<$Res>(_value.documentNumber, (value) {
       return _then(_value.copyWith(documentNumber: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $DateOfBirthCopyWith<$Res> get dateOfBirth {
-    return $DateOfBirthCopyWith<$Res>(_value.dateOfBirth, (value) {
+  $DocumentFieldCopyWith<$Res> get dateOfBirth {
+    return $DocumentFieldCopyWith<$Res>(_value.dateOfBirth, (value) {
       return _then(_value.copyWith(dateOfBirth: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $DateOfBirthCopyWith<$Res> get expirationDate {
-    return $DateOfBirthCopyWith<$Res>(_value.expirationDate, (value) {
+  $DocumentFieldCopyWith<$Res> get expirationDate {
+    return $DocumentFieldCopyWith<$Res>(_value.expirationDate, (value) {
       return _then(_value.copyWith(expirationDate: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $AddressCopyWith<$Res> get cde {
-    return $AddressCopyWith<$Res>(_value.cde, (value) {
+  $DocumentFieldCopyWith<$Res> get cde {
+    return $DocumentFieldCopyWith<$Res>(_value.cde, (value) {
       return _then(_value.copyWith(cde: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $AddressCopyWith<$Res> get curp {
-    return $AddressCopyWith<$Res>(_value.curp, (value) {
+  $DocumentFieldCopyWith<$Res> get curp {
+    return $DocumentFieldCopyWith<$Res>(_value.curp, (value) {
       return _then(_value.copyWith(curp: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $AddressCopyWith<$Res> get ne {
-    return $AddressCopyWith<$Res>(_value.ne, (value) {
+  $DocumentFieldCopyWith<$Res> get ne {
+    return $DocumentFieldCopyWith<$Res>(_value.ne, (value) {
       return _then(_value.copyWith(ne: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $AddressCopyWith<$Res> get ocrNumber {
-    return $AddressCopyWith<$Res>(_value.ocrNumber, (value) {
+  $DocumentFieldCopyWith<$Res> get ocrNumber {
+    return $DocumentFieldCopyWith<$Res>(_value.ocrNumber, (value) {
       return _then(_value.copyWith(ocrNumber: value) as $Val);
     });
   }
@@ -206,34 +206,34 @@ abstract class _$$FieldsImplCopyWith<$Res> implements $FieldsCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {Address fullName,
-      Address address,
-      Address documentNumber,
-      DateOfBirth dateOfBirth,
-      DateOfBirth expirationDate,
-      Address cde,
-      Address curp,
-      Address ne,
-      Address ocrNumber});
+      {DocumentField fullName,
+      DocumentField address,
+      DocumentField documentNumber,
+      DocumentField dateOfBirth,
+      DocumentField expirationDate,
+      DocumentField cde,
+      DocumentField curp,
+      DocumentField ne,
+      DocumentField ocrNumber});
 
   @override
-  $AddressCopyWith<$Res> get fullName;
+  $DocumentFieldCopyWith<$Res> get fullName;
   @override
-  $AddressCopyWith<$Res> get address;
+  $DocumentFieldCopyWith<$Res> get address;
   @override
-  $AddressCopyWith<$Res> get documentNumber;
+  $DocumentFieldCopyWith<$Res> get documentNumber;
   @override
-  $DateOfBirthCopyWith<$Res> get dateOfBirth;
+  $DocumentFieldCopyWith<$Res> get dateOfBirth;
   @override
-  $DateOfBirthCopyWith<$Res> get expirationDate;
+  $DocumentFieldCopyWith<$Res> get expirationDate;
   @override
-  $AddressCopyWith<$Res> get cde;
+  $DocumentFieldCopyWith<$Res> get cde;
   @override
-  $AddressCopyWith<$Res> get curp;
+  $DocumentFieldCopyWith<$Res> get curp;
   @override
-  $AddressCopyWith<$Res> get ne;
+  $DocumentFieldCopyWith<$Res> get ne;
   @override
-  $AddressCopyWith<$Res> get ocrNumber;
+  $DocumentFieldCopyWith<$Res> get ocrNumber;
 }
 
 /// @nodoc
@@ -261,39 +261,39 @@ class __$$FieldsImplCopyWithImpl<$Res>
       fullName: null == fullName
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
-              as Address,
+              as DocumentField,
       address: null == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
-              as Address,
+              as DocumentField,
       documentNumber: null == documentNumber
           ? _value.documentNumber
           : documentNumber // ignore: cast_nullable_to_non_nullable
-              as Address,
+              as DocumentField,
       dateOfBirth: null == dateOfBirth
           ? _value.dateOfBirth
           : dateOfBirth // ignore: cast_nullable_to_non_nullable
-              as DateOfBirth,
+              as DocumentField,
       expirationDate: null == expirationDate
           ? _value.expirationDate
           : expirationDate // ignore: cast_nullable_to_non_nullable
-              as DateOfBirth,
+              as DocumentField,
       cde: null == cde
           ? _value.cde
           : cde // ignore: cast_nullable_to_non_nullable
-              as Address,
+              as DocumentField,
       curp: null == curp
           ? _value.curp
           : curp // ignore: cast_nullable_to_non_nullable
-              as Address,
+              as DocumentField,
       ne: null == ne
           ? _value.ne
           : ne // ignore: cast_nullable_to_non_nullable
-              as Address,
+              as DocumentField,
       ocrNumber: null == ocrNumber
           ? _value.ocrNumber
           : ocrNumber // ignore: cast_nullable_to_non_nullable
-              as Address,
+              as DocumentField,
     ));
   }
 }
@@ -316,23 +316,23 @@ class _$FieldsImpl implements _Fields {
       _$$FieldsImplFromJson(json);
 
   @override
-  final Address fullName;
+  final DocumentField fullName;
   @override
-  final Address address;
+  final DocumentField address;
   @override
-  final Address documentNumber;
+  final DocumentField documentNumber;
   @override
-  final DateOfBirth dateOfBirth;
+  final DocumentField dateOfBirth;
   @override
-  final DateOfBirth expirationDate;
+  final DocumentField expirationDate;
   @override
-  final Address cde;
+  final DocumentField cde;
   @override
-  final Address curp;
+  final DocumentField curp;
   @override
-  final Address ne;
+  final DocumentField ne;
   @override
-  final Address ocrNumber;
+  final DocumentField ocrNumber;
 
   @override
   String toString() {
@@ -381,36 +381,36 @@ class _$FieldsImpl implements _Fields {
 
 abstract class _Fields implements Fields {
   const factory _Fields(
-      {required final Address fullName,
-      required final Address address,
-      required final Address documentNumber,
-      required final DateOfBirth dateOfBirth,
-      required final DateOfBirth expirationDate,
-      required final Address cde,
-      required final Address curp,
-      required final Address ne,
-      required final Address ocrNumber}) = _$FieldsImpl;
+      {required final DocumentField fullName,
+      required final DocumentField address,
+      required final DocumentField documentNumber,
+      required final DocumentField dateOfBirth,
+      required final DocumentField expirationDate,
+      required final DocumentField cde,
+      required final DocumentField curp,
+      required final DocumentField ne,
+      required final DocumentField ocrNumber}) = _$FieldsImpl;
 
   factory _Fields.fromJson(Map<String, dynamic> json) = _$FieldsImpl.fromJson;
 
   @override
-  Address get fullName;
+  DocumentField get fullName;
   @override
-  Address get address;
+  DocumentField get address;
   @override
-  Address get documentNumber;
+  DocumentField get documentNumber;
   @override
-  DateOfBirth get dateOfBirth;
+  DocumentField get dateOfBirth;
   @override
-  DateOfBirth get expirationDate;
+  DocumentField get expirationDate;
   @override
-  Address get cde;
+  DocumentField get cde;
   @override
-  Address get curp;
+  DocumentField get curp;
   @override
-  Address get ne;
+  DocumentField get ne;
   @override
-  Address get ocrNumber;
+  DocumentField get ocrNumber;
   @override
   @JsonKey(ignore: true)
   _$$FieldsImplCopyWith<_$FieldsImpl> get copyWith =>
