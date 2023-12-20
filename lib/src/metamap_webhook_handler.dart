@@ -2,7 +2,7 @@
 
 import 'dart:convert';
 
-import 'package:mati_rest_api/mati_rest_api.dart';
+import 'package:metamap_webhook_handler/src/models/metamap_user_information/metamap_user_information.dart';
 import 'package:shelf/shelf.dart' as shelf;
 import 'package:shelf_web_socket/shelf_web_socket.dart';
 
@@ -22,7 +22,7 @@ class MetamapWebhookHandler {
     (webSocketChannel) {
       webSocketChannel.stream.listen(
         (String message) {
-          final body = MatiWebhookResourceData.fromMap(
+          final body = MetamapUserInformation.fromJson(
             jsonDecode(message) as Map<String, dynamic>,
           );
 
